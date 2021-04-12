@@ -1,5 +1,49 @@
 @import "partials/mixins";
 @import "partials/variables";
+
+@include google-font("Roboto");
+@include google-font("Titillium+Web");
+
+@include apply-to-ie-6 {
+    body {
+        font-size: 125%;
+    }
+}
+
 body {
     background-color: $navy-blue;
+    color: $warm-yellow;
+    font-family: $text-font;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2%;
+    background-color: $rust-red;
+    text-align: center;
+    font-family: $headline-font;
+    font-size: $large-font;
+    width: 90%;
+    @include round;
+
+}
+
+footer {
+    background-color: $rust-red;
+}
+
+.logo-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: auto;
+}
+.title {
+    margin-right: 30%;
 }
